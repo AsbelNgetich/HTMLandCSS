@@ -218,14 +218,25 @@ header {
     transform: translate(-50%,-50%);
 }
 
-.logo{
-    height: 120px;
+.logo {
+    height: 100px;
     width: auto;
     float:left;
     margin-top: 20px;
     
 }
 
+.logo-black { 
+    display: none;
+    height: 50px;
+    width: auto;
+    float:left;
+    margin: 5px 0;
+    
+
+}
+
+/* Main Nav */
 .main-nav {
     float: right;
     list-style: none;
@@ -256,6 +267,46 @@ header {
     
     
 }
+
+/* Mobile navi */
+.mobile-nav-icon {
+    
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon ion-icon {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* sticky navi */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+
+
+.sticky .main-nav li a:link, 
+.sticky .main-nav li a:visited {
+    padding: 16px 0;
+    color: #555;
+   
+}
+
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
 
 /*------------------*/
 /* Features */
@@ -610,3 +661,27 @@ footer p {
     margin-top: 20px;
 }
 
+/* -------------------*/
+/* Animations */
+/* ------------------*/
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3
+{
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-1.animated,
+.js--wp-2.animated,
+.js--wp-3.animated
+{
+    opacity: 1;
+}
